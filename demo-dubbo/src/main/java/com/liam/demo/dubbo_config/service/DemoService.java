@@ -1,4 +1,4 @@
-package com.liam.demo.dubbo_config.api_config;
+package com.liam.demo.dubbo_config.service;
 
 public interface DemoService {
 

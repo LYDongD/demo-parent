@@ -3,6 +3,7 @@ package com.liam.demo.dubbo_config.api_config;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
+import com.liam.demo.dubbo_config.service.DemoService;
 
 public class ConsumerApplication {
 
@@ -12,6 +13,7 @@ public class ConsumerApplication {
         referenceConfig.setApplication(new ApplicationConfig("dubbo-demo-cosumer"));
         referenceConfig.setRegistry(new RegistryConfig("multicast://224.5.6.7:1234"));
         referenceConfig.setInterface(DemoService.class);
+        referenceConfig.setVersion("2.1.1");
         DemoService demoService = referenceConfig.get();
 
         //rpc调用

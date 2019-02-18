@@ -14,6 +14,7 @@ public class ProviderApplication {
         serviceConfig.setRegistry(new RegistryConfig("multicast://224.5.6.7:1234"));
         serviceConfig.setInterface(DemoService.class);
         serviceConfig.setRef(new DemoServiceImpl());
+        serviceConfig.setGeneric("true");
         serviceConfig.export();
         System.in.read();
     }

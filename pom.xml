@@ -19,6 +19,7 @@
 
     <modules>
         <module>demo-dubbo</module>
+        <module>demo-jdk</module>
     </modules>
 
     <dependencies>

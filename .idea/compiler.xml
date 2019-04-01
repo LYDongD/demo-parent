@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-dubbo" />
         <module name="demo-jdk" />
+        <module name="demo-mybatis" />
       </profile>
     </annotationProcessing>
   </component>

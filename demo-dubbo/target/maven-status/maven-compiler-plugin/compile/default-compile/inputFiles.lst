@@ -1,0 +1,8 @@
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/xml_config/ConsumerApplication.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/xml_config/DemoServiceImpl.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/api_config/DemoServiceImpl.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/App.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/api_config/ProviderApplication.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/api_config/ConsumerApplication.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/xml_config/ProviderApplication.java
+/Users/liam/demo-parent/demo-dubbo/src/main/java/com/liam/demo/dubbo_config/service/DemoService.java

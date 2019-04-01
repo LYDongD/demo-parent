@@ -1,6 +1,5 @@
 package com.liam.demo;
 
-import com.liam.demo.beans.MyTestBean;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;

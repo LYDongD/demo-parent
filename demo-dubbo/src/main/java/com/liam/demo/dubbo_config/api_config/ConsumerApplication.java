@@ -21,8 +21,8 @@ public class ConsumerApplication {
         String name = (String) demoService.$invoke("sayHello", new String[]{"".getClass().getName()}, new Object[]{"pony"});
 
 //        DemoService demoService = referenceConfig.get();
-        referenceConfig.setVersion("2.1.1");
-        DemoService demoService = referenceConfig.get();
+//        referenceConfig.setVersion("2.1.1");
+//        DemoService demoService = referenceConfig.get();
         //rpc调用
 //        String name = demoService.sayHello("liam");
         System.out.println("rpc call success: " + name);

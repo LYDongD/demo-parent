@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.liam.demo.mapper.UserMapperTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.152 s <<< FAILURE! - in com.liam.demo.mapper.UserMapperTest
+findUserList(com.liam.demo.mapper.UserMapperTest)  Time elapsed: 0.203 s  <<< ERROR!
+org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ids != null and ids.length() > 0'. Cause: org.apache.ibatis.ognl.MethodFailedException: Method "length" failed for object [1, 2, 3] [java.lang.NoSuchMethodException: java.util.Arrays$ArrayList.length()]
+### Cause: org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ids != null and ids.length() > 0'. Cause: org.apache.ibatis.ognl.MethodFailedException: Method "length" failed for object [1, 2, 3] [java.lang.NoSuchMethodException: java.util.Arrays$ArrayList.length()]
+	at com.liam.demo.mapper.UserMapperTest.findUserList(UserMapperTest.java:54)
+Caused by: org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ids != null and ids.length() > 0'. Cause: org.apache.ibatis.ognl.MethodFailedException: Method "length" failed for object [1, 2, 3] [java.lang.NoSuchMethodException: java.util.Arrays$ArrayList.length()]
+	at com.liam.demo.mapper.UserMapperTest.findUserList(UserMapperTest.java:54)
+Caused by: org.apache.ibatis.ognl.MethodFailedException: Method "length" failed for object [1, 2, 3]
+	at com.liam.demo.mapper.UserMapperTest.findUserList(UserMapperTest.java:54)
+Caused by: java.lang.NoSuchMethodException: java.util.Arrays$ArrayList.length()
+	at com.liam.demo.mapper.UserMapperTest.findUserList(UserMapperTest.java:54)
+

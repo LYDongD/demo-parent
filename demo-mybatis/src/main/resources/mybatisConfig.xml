@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--config dtd 约束-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--加载属性-->
+    <properties resource="db.properties">
+        <!--除了加载resource/url之外，这里也可以继续配置属性, 不建议在这里添加-->
+        <property name="key" value="value"/>
+    </properties>
+
+    <!--mybatis全局参数配置, 例如二级缓存开关cacheEnabled 等, 需要时才设置，否则建议采用默认的-->
+    <!--<settings>-->
+    <!--</settings>-->
+
+    <!--简化mapper statement中parameterType和returnType的类型名称-->
+    <!--基本类型默认支持别名，例如java.lang.Integer -> int -->
+    <typeAliases>
+        <!--单个定义模式-->
+        <!--<typeAlias type="com.liam.demo.model.pojo.User" alias="User"/>-->
+
+        <!--批量扫描模式,默认别名即包下的类名，可定义多个包-->
+        <package name="com.liam.demo.model.pojo"/>
+    </typeAliases>
+
+    <!--类型处理器，实现输入输出jdbc类型和java对象类型直接的映射-->
+    <!--<typeHandlers>-->
+
+    <!--</typeHandlers>-->
+
+    <!--配置myabatis环境-->
+    <environments default="development">
+        <environment id="development">
+            <!--使用jdbc事务-->
+            <transactionManager type="JDBC"/>
+            <!--数据库连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--映射器，配置需要加载的映射文件-->
+    <mappers>
+        <!--通过resource, 单个加载模式，无法使用resource批量加载, 可以采用整合spring后指定SqlSessionFactory中mapperLocation的方式-->
+        <mapper resource="mapper/UserMapper.xml"/>
+        <!--通过dao接口加载, 需要保证接口类名和mapper xml文件类名一致且在同一个目录，且使用mapper动态代理方式-->
+        <!--<mapper class="com.liam.demo.mapper.UserMapper"/>-->
+
+        <!--通过dao接口加载， 批量加载, 指定mapper接口的包名-->
+        <!--<package name="com.liam.demo.mapper"/>-->
+    </mappers>
+</configuration>

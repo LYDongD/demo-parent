@@ -1,1 +1,8 @@
+com/liam/demo/jdbc/MybatisFirst.class
 com/liam/demo/jdbc/JdbcTest.class
+com/liam/demo/jdbc/UserDaoImpl.class
+com/liam/demo/jdbc/UserDao.class
+com/liam/demo/model/pojo/UserQueryVO.class
+com/liam/demo/model/pojo/User.class
+com/liam/demo/mapper/UserMapper.class
+com/liam/demo/model/pojo/UserCustom.class

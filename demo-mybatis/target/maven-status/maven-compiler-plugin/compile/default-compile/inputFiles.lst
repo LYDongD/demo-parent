@@ -1,1 +1,8 @@
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/mapper/UserMapper.java
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/model/pojo/UserCustom.java
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/model/pojo/UserQueryVO.java
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/jdbc/UserDaoImpl.java
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/jdbc/MybatisFirst.java
 /Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/jdbc/JdbcTest.java
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/model/pojo/User.java
+/Users/liam/demo-parent/demo-mybatis/src/main/java/com/liam/demo/jdbc/UserDao.java

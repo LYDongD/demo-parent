@@ -1,0 +1,58 @@
+<!--config dtd 约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace = dao interface-->
+<mapper namespace="com.liam.demo.mapper.UserMapper">
+    <!--配置sql, 对应mapper statement-->
+    <!--id=findUserById sql的唯一标识-->
+    <!--sql, 输入和输出的类型-->
+    <!--这里User是别名，在配置文件中定义了typeAliases别名-->
+    <select id="findUserById" parameterType="int" resultType="User">
+        select *from tb_user where id = #{id}
+    </select>
+
+    <!--result type 指定的是单条记录的返回类型-->
+    <!--使用${value}拼接符可实现value参数替换，可能引发SQL注入的问题，例如注入"or 1=1 or" => % or 1 = 1 or %-->
+    <!--<select id="findUserByName" parameterType="java.lang.String" resultType="com.liam.demo.model.pojo.User">-->
+        <!--select *from tb_user where username like '%${value}%'-->
+    <!--</select>-->
+
+    <select id="findUserByName" parameterType="java.lang.String" resultType="com.liam.demo.model.pojo.User">
+        select *from tb_user where username like concat('%', #{value}, '%')
+    </select>
+
+    <!--添加用户, 参数类型为pojo, 占位符名称为pojo的属性名称， mybatis通过OGNL获取对象的属性-->
+    <insert id="addUser" parameterType="com.liam.demo.model.pojo.User">
+        <!--select key, 在插入后执行查询，并将查询结果设置到parameter的keyPropertey属性中 -->
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into tb_user(username, sex)
+        values(#{username}, #{sex})
+    </insert>
+
+    <!--添加用户，插入非自增主键UUID，在插入前执行select生成UUID-->
+    <!--<insert id="addUserByUUID" parameterType="com.liam.demo.model.pojo.User">-->
+
+        <!--<selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">-->
+            <!--select UUID()-->
+        <!--</selectKey>-->
+
+        <!--insert into tb_user(id, username, sex)-->
+        <!--values(#{id}, #{username}, #{sex})-->
+    <!--</insert>-->
+
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from tb_user where id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="com.liam.demo.model.pojo.User">
+        update tb_user set username = #{username}, sex = #{sex}
+        where id = #{id}
+    </update>
+
+
+
+</mapper>

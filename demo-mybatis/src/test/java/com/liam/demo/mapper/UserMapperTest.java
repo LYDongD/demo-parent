@@ -38,7 +38,12 @@ public class UserMapperTest {
         //根据返回类型内部调用selectOne或selectList
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         User user = userMapper.findUserById(2);
+
+        //使用一级缓存
+        User user1 = userMapper.findUserById(2);
+
         System.out.println(user);
+        System.out.println(user1);
     }
 
     @Test
@@ -76,6 +81,14 @@ public class UserMapperTest {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         User user = userMapper.findUserByIdResultMap(3);
         System.out.println(user);
+    }
+
+    @Test
+    public void findUserItems() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        List<UserCustom> userCustoms = userMapper.findUserItems();
+        System.out.println(userCustoms);
     }
 
 }

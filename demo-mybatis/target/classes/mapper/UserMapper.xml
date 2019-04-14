@@ -10,9 +10,18 @@
     <!--定制查询结果集中，列和pojo属性直接的映射关系-->
     <resultMap id="BasicResultMap" type="User">
         <!--指定查询结果集记录的唯一标识-->
-        <id column="_id" property="id"/>
-        <result column="_username" property="username"/>
-        <result column="_sex" property="sex"/>
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="sex" property="sex"/>
+    </resultMap>
+
+    <resultMap id="UserItemsMap" type="com.liam.demo.model.pojo.UserCustom" extends="BasicResultMap">
+        <collection property="itemList" ofType="com.liam.demo.model.pojo.Item">
+            <id column="item_id" property="id"/>
+            <result column="item_name" property="name"/>
+            <result column="item_price" property="price"/>
+            <result column="item_detail" property="detail"/>
+        </collection>
     </resultMap>
 
     <sql id="query_user_where">
@@ -47,6 +56,19 @@
 
     <select id="findUserByName" parameterType="java.lang.String" resultType="com.liam.demo.model.pojo.User">
         select *from tb_user where username like concat('%', #{value}, '%')
+    </select>
+
+
+    <select id="findUserItems" resultMap="UserItemsMap">
+        select A.*,
+        D.id as item_id, D.name as item_name, D.price as item_price, D.detail as item_detail
+        from tb_user as A
+          inner join tb_order as B
+            on A.id = B.user_id
+          inner join tb_order_detail as C
+            on C.order_id = B.id
+          inner join tb_item as D
+            on D.id = C.item_id;
     </select>
 
     <!--添加用户, 参数类型为pojo, 占位符名称为pojo的属性名称， mybatis通过OGNL获取对象的属性-->
@@ -87,17 +109,19 @@
             <!--引用sql片段-->
             <include refid="query_user_where"/>
             <!--引用其他sql片段或if语句-->
-            <!--<if test="ids != null and ids.size > 0">-->
-                <!--and id in-->
-                <!--<foreach collection="ids" item="userId" open="(" close=")" separator=",">-->
-                    <!--#{userId}-->
-                <!--</foreach>-->
-            <!--</if>-->
+
+            <!-- list 解析, in 或 or -->
             <if test="ids != null and ids.size > 0">
-                <foreach collection="ids" item="userId" open="and (" close=")" separator="or">
-                    id = #{userId}
+                and id in
+                <foreach collection="ids" item="userId" open="(" close=")" separator=",">
+                    #{userId}
                 </foreach>
             </if>
+            <!--<if test="ids != null and ids.size > 0">-->
+                <!--<foreach collection="ids" item="userId" open="and (" close=")" separator="or">-->
+                    <!--id = #{userId}-->
+                <!--</foreach>-->
+            <!--</if>-->
         </where>
     </select>
 

@@ -1,0 +1,66 @@
+<!--config dtd 约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace = dao interface-->
+<mapper namespace="com.liam.demo.mapper.OrderMapper">
+    <resultMap id="OrderUserMap" type="com.liam.demo.model.pojo.OrderCustom">
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="number" property="number"/>
+        <result column="createtime" property="createtime"/>
+        <result column="note" property="note"/>
+        <association property="user" javaType="com.liam.demo.model.pojo.User">
+            <id column="user_id" property="id"/>
+            <result column="sex" property="sex"/>
+            <result column="username" property="username"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="OrderUserLazyLoadMapper" type="com.liam.demo.model.pojo.OrderCustom">
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="number" property="number"/>
+        <result column="createtime" property="createtime"/>
+        <result column="note" property="note"/>
+        <!--指定延迟加载user-->
+        <association property="user" javaType="com.liam.demo.model.pojo.User"
+                     select="com.liam.demo.mapper.UserMapper.findUserById" column="user_id">
+            <id column="user_id" property="id"/>
+            <result column="sex" property="sex"/>
+            <result column="username" property="username"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="orderDetailMap" type="com.liam.demo.model.pojo.OrderCustom" extends="OrderUserMap">
+        <collection property="orderDetailList" ofType="com.liam.demo.model.pojo.OrderDetail">
+            <id column="order_detail_id" property="id"/>
+            <result column="order_id" property="orderId"/>
+            <result column="item_id" property="itemId"/>
+            <result column="item_count" property="itemCount"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectOrderUser" resultMap="OrderUserMap">
+        select A.*, B.username, B.sex from tb_order as A
+          inner join tb_user as B
+            on A.user_id = B.id
+    </select>
+
+    <select id="selectOrderUserDetail" resultMap="orderDetailMap">
+        select A.*,
+        B.username, B.sex,
+        C.id as order_detail_id, C.order_id, C.item_id, C.item_count
+        from tb_order as A
+        inner join tb_user as B
+          on A.user_id = B.id
+        inner join tb_order_detail as C
+          on C.order_id = A.id
+    </select>
+
+    <select id="selectOrderUserLazy" resultMap="OrderUserLazyLoadMapper">
+        select *from tb_order
+    </select>
+
+</mapper>

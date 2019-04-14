@@ -11,9 +11,14 @@
         <property name="key" value="value"/>
     </properties>
 
-    <!--mybatis全局参数配置, 例如二级缓存开关cacheEnabled 等, 需要时才设置，否则建议采用默认的-->
-    <!--<settings>-->
-    <!--</settings>-->
+    <!--mybatis全局参数配置, 例如延迟加载，二级缓存开关cacheEnabled 等, 需要时才设置，否则建议采用默认的-->
+    <settings>
+        <!--打开延迟加载支持-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--关闭默认使用lazyLoad的方法，例如toString()-->
+        <setting name="lazyLoadTriggerMethods" value=""/>
+    </settings>
 
     <!--简化mapper statement中parameterType和returnType的类型名称-->
     <!--基本类型默认支持别名，例如java.lang.Integer -> int -->
@@ -49,6 +54,7 @@
     <mappers>
         <!--通过resource, 单个加载模式，无法使用resource批量加载, 可以采用整合spring后指定SqlSessionFactory中mapperLocation的方式-->
         <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="mapper/OrderMapper.xml"/>
         <!--通过dao接口加载, 需要保证接口类名和mapper xml文件类名一致且在同一个目录，且使用mapper动态代理方式-->
         <!--<mapper class="com.liam.demo.mapper.UserMapper"/>-->
 

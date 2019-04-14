@@ -32,4 +32,7 @@ public interface UserMapper {
     //使用ResultMap实现输出映射
     public User findUserByIdResultMap(int id) throws Exception;
 
+    public List<UserCustom> findUserItems() throws Exception;
+
+
 }

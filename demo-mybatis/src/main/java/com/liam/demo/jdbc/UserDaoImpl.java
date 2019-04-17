@@ -3,6 +3,7 @@ package com.liam.demo.jdbc;
 import com.liam.demo.model.pojo.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class UserDaoImpl implements UserDao{
 
-    //注入SqlSessionFactory单例，通过spring容器的注入或构造方法注入
+    //注入SqlSessionFactory单例，通过spring容器的注入或构造方法注入,继承SqlSessionDaoSupport后不需要通过特定api注入
     private SqlSessionFactory sqlSessionFactory;
 
     public UserDaoImpl(SqlSessionFactory sqlSessionFactory) {

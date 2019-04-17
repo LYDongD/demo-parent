@@ -15,7 +15,7 @@ public class BaseTest {
     public void before() throws Exception{
         //创建SqlSessionFactory单例
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
         //创建会话工厂
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
     }

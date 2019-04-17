@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="mysql" targetRuntime="MyBatis3">
+
+        <!--关闭注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--jdbc-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://47.106.84.7/db_test?characterEncodig=utf-8"
+                        userId="root"
+                        password="pss123er"/>
+        <!--pojo-->
+        <javaModelGenerator targetPackage="com.liam.demo.model.pojo" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--mapper.xml-->
+        <sqlMapGenerator targetPackage="generator.mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="ture"/>
+            <property name="trimStrings" value="true"/>
+        </sqlMapGenerator>
+
+        <!--dao-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.liam.demo.mapper" targetProject="src/main/java"/>
+
+        <!--ta-->
+        <table schema="db_test" tableName="tb_item" domainObjectName="Item"/>
+    </context>
+</generatorConfiguration>

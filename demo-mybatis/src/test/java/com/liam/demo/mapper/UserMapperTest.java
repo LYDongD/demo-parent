@@ -14,8 +14,6 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class UserMapperTest {
 
     private SqlSessionFactory sqlSessionFactory;
@@ -24,7 +22,7 @@ public class UserMapperTest {
     public void setUp() throws Exception{
         //创建SqlSessionFactory单例
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
         //创建会话工厂
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
     }

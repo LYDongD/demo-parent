@@ -17,7 +17,7 @@ public class MybatisFirst {
     public void findUserById() throws Exception {
 
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
 
         //创建会话工厂
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
@@ -35,7 +35,7 @@ public class MybatisFirst {
     public void findUserByUserName() throws Exception {
 
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
 
         //创建会话工厂
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
@@ -54,7 +54,7 @@ public class MybatisFirst {
     public void addUser() throws Exception {
 
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
 
         //创建会话工厂
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
@@ -76,7 +76,7 @@ public class MybatisFirst {
     public void deleteUser() throws Exception {
 
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
 
         //创建会话工厂
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
@@ -94,7 +94,7 @@ public class MybatisFirst {
     public void updateUser() throws Exception {
 
         //加载mybatis全局配置
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
 
         //创建会话工厂
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);

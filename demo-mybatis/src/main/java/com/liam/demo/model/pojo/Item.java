@@ -1,7 +1,6 @@
 package com.liam.demo.model.pojo;
 
 public class Item {
-
     private Integer id;
 
     private String name;
@@ -23,7 +22,7 @@ public class Item {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public Integer getPrice() {
@@ -39,6 +38,16 @@ public class Item {
     }
 
     public void setDetail(String detail) {
-        this.detail = detail;
+        this.detail = detail == null ? null : detail.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", detail='" + detail + '\'' +
+                '}';
     }
 }

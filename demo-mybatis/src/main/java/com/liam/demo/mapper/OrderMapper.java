@@ -36,7 +36,7 @@ public interface OrderMapper {
     public List<OrderCustom> selectOrderUserLazy() throws Exception;
 
     public static void main(String args[]) throws Exception{
-        InputStream resource = Resources.getResourceAsStream("mybatisConfig.xml");
+        InputStream resource = Resources.getResourceAsStream("mybatis/mybatisConfig.xml");
         //创建会话工厂
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resource);
         SqlSession sqlSession = sqlSessionFactory.openSession();

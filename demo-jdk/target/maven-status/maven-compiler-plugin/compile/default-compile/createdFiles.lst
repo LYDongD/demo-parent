@@ -1,5 +1,6 @@
 com/liam/demo/jvm/SynchronizeTest$Lock.class
 com/liam/demo/jvm/EscapeDemo.class
+com/liam/demo/thread/CheckThreadDemo$1.class
 com/liam/demo/singleton/Singleton$SingletonHolder.class
 com/liam/demo/thread/LockDemo$1.class
 com/liam/demo/string/StringDemo.class
@@ -20,6 +21,7 @@ com/liam/demo/singleton/Singleton$1.class
 com/liam/demo/jmm/OOMDemo.class
 com/liam/demo/collections/LinkedHashMapDemo.class
 com/liam/demo/jvm/SynchronizeTest.class
+com/liam/demo/thread/CheckThreadDemo.class
 com/liam/demo/gc/GCInfo.class
 com/liam/demo/collections/LinkedHashMapDemo$1.class
 com/liam/demo/thread/Account$1.class

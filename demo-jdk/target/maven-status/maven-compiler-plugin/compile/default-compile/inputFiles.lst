@@ -10,6 +10,7 @@
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/ThreadLocalDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/jvm/SynchronizeTest.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/ThreadJoinDemo.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/CheckThreadDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/jmm/OOMDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/loader/ClassLoaderDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/collections/LinkedHashMapDemo.java

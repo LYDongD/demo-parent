@@ -2,6 +2,7 @@
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/jvm/EscapeDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/App.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/SynchronizeDemo.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/ThreadInterruptDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/WaitNotifyDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/FileIODemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/AtomicDemo.java
@@ -14,6 +15,7 @@
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/jmm/OOMDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/loader/ClassLoaderDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/collections/LinkedHashMapDemo.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/bigfile/BigFileGenerator.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/classloader/People.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/string/StringDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/LockDemo.java

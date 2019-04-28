@@ -29,23 +29,19 @@ public class CheckThreadDemo {
 
         for (int i = 0; i < 10; i++) {
             final int index = i;
-            Thread thread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                    if (index % 2 == 0 ) {
-                        synchronized (lock) {
-                            try {
-                                lock.wait();
-                            }catch (InterruptedException ie) {
-                                ie.printStackTrace();
-                            }
+            Thread thread = new Thread(() -> {
+                if (index % 2 == 0 ) {
+                    synchronized (lock) {
+                        try {
+                            lock.wait();
+                        }catch (InterruptedException ie) {
+                            ie.printStackTrace();
                         }
-                    }else {
-                        while (true){}
                     }
-
+                }else {
+                    while (true){}
                 }
+
             });
 
             thread.setName("i am thread " + i);

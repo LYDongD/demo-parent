@@ -10,10 +10,10 @@ import java.sql.DriverManager;
  */
 public class DBConnector {
 
-    private static String driver = "com.mysql.jdbc.Driver";
+    private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String username = "root";
-    private static String password = "Manager123!";
-    private static String url = "jdbc:mysql://127.0.0.1:3306/bigfile?characterEncoding=UTF-8";
+    private static String password = "pss123er";
+    private static String url = "jdbc:mysql://47.106.84.7:3306/db_test?characterEncoding=UTF-8";
 
     private Connection connection;
 

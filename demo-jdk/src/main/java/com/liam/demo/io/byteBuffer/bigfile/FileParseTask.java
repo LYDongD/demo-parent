@@ -72,9 +72,8 @@ public class FileParseTask implements Runnable{
     @Override
     public void run() {
 
-        long start = System.currentTimeMillis();
-
         try {
+
             //1 文件映射到内存镜像
             MappedByteBuffer mappedByteBuffer = fileAccess.getChannel().map(FileChannel.MapMode.READ_ONLY, filePartion.getStart(), this.sliceSize);
 
@@ -97,7 +96,7 @@ public class FileParseTask implements Runnable{
                         handler.handle(new String(byteArrayOutputStream.toByteArray()), false);
                         byteArrayOutputStream.reset();
                     }else {
-                        byteArrayOutputStream.write(buffer);
+                        byteArrayOutputStream.write(tmp);
                     }
                 }
             }
@@ -106,13 +105,10 @@ public class FileParseTask implements Runnable{
             if (byteArrayOutputStream.size() > 0) {
                 handler.handle(new String(byteArrayOutputStream.toByteArray()), true);
             }
-
-            long end = System.currentTimeMillis();
             barrier.await();
 
-            System.out.println(Thread.currentThread().getName() + " finished  in " + (end - start) / 1000 + " s");
-
         }catch (Exception e) {
+
             e.printStackTrace();
         }
 

@@ -1,5 +1,9 @@
 com/liam/demo/jvm/SynchronizeTest$Lock.class
+com/liam/demo/io/byteBuffer/bigfile/DataHandler.class
 com/liam/demo/jvm/EscapeDemo.class
+com/liam/demo/io/byteBuffer/bigfile/DBConnector.class
+com/liam/demo/io/byteBuffer/bigfile/FileParseTask.class
+com/liam/demo/io/byteBuffer/bigfile/FilePartioner.class
 com/liam/demo/singleton/Singleton$SingletonHolder.class
 com/liam/demo/thread/LockDemo$1.class
 com/liam/demo/string/StringDemo.class
@@ -17,6 +21,7 @@ com/liam/demo/io/byteBuffer/bigfile/BigFileGenerator.class
 com/liam/demo/io/byteBuffer/FileIODemo.class
 com/liam/demo/App.class
 com/liam/demo/algorithm/GraphSearch$Node.class
+com/liam/demo/io/byteBuffer/bigfile/FilePartion.class
 com/liam/demo/singleton/Singleton$1.class
 com/liam/demo/jmm/OOMDemo.class
 com/liam/demo/collections/LinkedHashMapDemo.class
@@ -27,9 +32,11 @@ com/liam/demo/collections/LinkedHashMapDemo$1.class
 com/liam/demo/thread/Account$1.class
 com/liam/demo/thread/ThreadInterruptDemo.class
 com/liam/demo/thread/LockDemo.class
+com/liam/demo/io/byteBuffer/bigfile/MainControl$1.class
 com/liam/demo/thread/ThreadJoinDemo$1.class
 com/liam/demo/thread/ThreadJoinDemo.class
 com/liam/demo/classloader/People.class
+com/liam/demo/io/byteBuffer/bigfile/MainControl.class
 com/liam/demo/thread/SynchronizeDemo$1.class
 com/liam/demo/singleton/Singleton.class
 com/liam/demo/thread/AtomicDemo.class

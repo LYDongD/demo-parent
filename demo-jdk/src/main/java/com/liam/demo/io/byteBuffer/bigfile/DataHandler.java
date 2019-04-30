@@ -15,7 +15,7 @@ public class DataHandler {
     private PreparedStatement preparedStatement;
 
     //插入数据sql
-    private static final String INSERT_DATA_QL = "insert into web_request_multiple1(time,src_ip,request_url,dest_ip,dest_port,method,user_agent,connection,server,status,protocol) values(?,?,?,?,?,?,?,?,?,?,?)";
+    private static final String INSERT_DATA_QL = "insert into web_request_multiple(time,src_ip,request_url,dest_ip,dest_port,method,user_agent,connection,server,status,protocol) values(?,?,?,?,?,?,?,?,?,?,?)";
 
     //计数器，和maxBatch搭配使用，当counter达到maxBatch时写入数据库
     private int counter = 0;
@@ -23,7 +23,7 @@ public class DataHandler {
     //处理的总行数
     private long totalLines = 0;
 
-    //批量插入
+    //批量插入, 每200条写入一次
     private int maxBatch = 200;
 
 
@@ -45,10 +45,10 @@ public class DataHandler {
         totalLines++;
         counter++;
 
-        //填充sql参数
+        //填充sql参数 todo 传进来的content不是一行数据，说明根据换行符\r\n提取行相关逻辑仍然有缺陷
         String fields[] = content.split(",");
+        System.out.println("fileds: " +  fields.length);
         for (int i = 1; i <= fields.length; i++) {
-
             //特殊处理int和long类型的字段
             if (i == 1) { //time 时间戳
                 preparedStatement.setObject(i, Long.parseLong(fields[i-1]));

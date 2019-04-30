@@ -15,7 +15,7 @@ import java.util.Random;
 public class BigFileGenerator {
 
     public static void main(String args[]) throws Exception{
-        BigFileGenerator.createBigFile("/Users/lee/Desktop/test.csv", 1024 * 1024L * 300);
+        BigFileGenerator.createBigFile("/Users/lee/test.csv", 1024 * 1024L * 100);
     }
 
     /**

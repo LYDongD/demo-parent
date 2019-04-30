@@ -23,7 +23,7 @@ public class FilePartioner {
      * @param totalSize 文件总大小
      * @return
      */
-    public List<FilePartion> partion(RandomAccessFile randomAccessFile, long start, int splitCount, long totalSize) throws Exception{
+    public static List<FilePartion> partion(RandomAccessFile randomAccessFile, long start, int splitCount, long totalSize) throws Exception{
 
         if (splitCount < 2) {
             throw new RuntimeException("分区数量至少2个");
@@ -48,6 +48,8 @@ public class FilePartioner {
             randomAccessFile.seek(index);
             byte oneByte = randomAccessFile.readByte();
             while (oneByte != '\r' && oneByte != '\n') {
+                byte[] tmp = new byte[1];
+                tmp[0] = oneByte;
                 randomAccessFile.seek(index++);
                 oneByte = randomAccessFile.readByte();
             }

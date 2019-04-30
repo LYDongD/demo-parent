@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--通过beans元素声明bean直接的元信息和依赖关系，交给容器解析，加载和实现依赖注入-->
+<beans>
+    <bean id="computer" class="com.liam.demo.ioc.bean.Computer">
+        <property name="usb" ref="phone"/>
+    </bean>
+
+    <bean id="phone" class="com.liam.demo.ioc.bean.Phone">
+        <property name="brand" value="Apple"/>
+    </bean>
+
+    <bean id="camera" class="com.liam.demo.ioc.bean.Camera"/>
+</beans>

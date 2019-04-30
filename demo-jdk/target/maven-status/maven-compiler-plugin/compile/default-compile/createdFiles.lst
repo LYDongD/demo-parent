@@ -2,6 +2,7 @@ com/liam/demo/jvm/SynchronizeTest$Lock.class
 com/liam/demo/io/byteBuffer/bigfile/DataHandler.class
 com/liam/demo/jvm/EscapeDemo.class
 com/liam/demo/io/byteBuffer/bigfile/DBConnector.class
+com/liam/demo/io/byteBuffer/nio/FileChannelDemo.class
 com/liam/demo/io/byteBuffer/bigfile/FileParseTask.class
 com/liam/demo/io/byteBuffer/bigfile/FilePartioner.class
 com/liam/demo/singleton/Singleton$SingletonHolder.class

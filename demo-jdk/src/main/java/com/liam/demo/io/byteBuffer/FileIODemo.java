@@ -35,7 +35,7 @@ public class FileIODemo {
      * 采用NIO，面向channle和buffer的方式读取文件数据
      */
     public void readDataNIO() throws IOException {
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024); //堆外内存
         CharBuffer charBuffer = CharBuffer.allocate(1024);
         CharsetDecoder decoder = Charset.forName("UTF-8").newDecoder();
         RandomAccessFile randomAccessFile = new RandomAccessFile(FILE_NAME, "rw");

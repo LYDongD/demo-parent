@@ -15,6 +15,7 @@
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/algorithm/GraphSearch.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/SynchronizeDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/ThreadInterruptDemo.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/nio/FileChannelDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/WaitNotifyDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/FileIODemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/classloader/MyClassLoader.java

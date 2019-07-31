@@ -18,6 +18,7 @@
         <setting name="aggressiveLazyLoading" value="false"/>
         <!--关闭默认使用lazyLoad的方法，例如toString()-->
         <setting name="lazyLoadTriggerMethods" value=""/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
     <!--简化mapper statement中parameterType和returnType的类型名称-->

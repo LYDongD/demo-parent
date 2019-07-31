@@ -1,3 +1,4 @@
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/disruptor/LongEventMain.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/ioc/bean/Camera.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/ThreadCount.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/jvm/EscapeDemo.java
@@ -19,13 +20,21 @@
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/jmm/OOMDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/gc/GCInfo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/algorithm/GraphSearch.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/disruptor/LongEvent.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/SynchronizeDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/ThreadInterruptDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/nio/FileChannelDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/WaitNotifyDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/FileIODemo.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/serialization/User.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/disruptor/LongEventProducerWithTranslator.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/ioc/bean/Phone.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/classloader/MyClassLoader.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/disruptor/LongEventHandler.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/gc/SafePointTest.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/disruptor/LongEventFactory.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/serialization/Bootstrap.java
+/Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/disruptor/LongEventProducer.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/io/byteBuffer/bigfile/MainControl.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/thread/CheckThreadDemo.java
 /Users/lee/demo-parent/demo-jdk/src/main/java/com/liam/demo/ioc/bean/IUSB.java
